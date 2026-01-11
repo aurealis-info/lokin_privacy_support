@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokin - Privacy & Support</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --purple-main: #8B5CF6;
+            --purple-dark: #7C3AED;
+            --purple-light: #A78BFA;
+            --blue-book: #7DD3FC;
+            --green-book: #4ADE80;
+            --orange-book: #FB923C;
+            --coral-red: #F87171;
+            --cream: #FEF3E2;
+            --cream-dark: #F5E6D3;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--purple-main);
+            min-height: 100vh;
+        }
+
+        header {
+            background: var(--purple-main);
+            color: white;
+            padding: 48px 20px 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .mascot {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 16px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .mascot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .tab-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background: white;
+            border-radius: 16px 16px 0 0;
+            margin-top: -40px;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 18px 24px;
+            border: none;
+            background: white;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-bottom: 4px solid transparent;
+        }
+
+        .tab-button:hover {
+            background: var(--cream);
+            color: var(--purple-dark);
+        }
+
+        .tab-button.active {
+            color: var(--purple-main);
+            border-bottom-color: var(--purple-main);
+            background: white;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 16px 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        h1.page-title {
+            font-size: 2rem;
+            color: var(--purple-dark);
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            color: #666;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--purple-dark);
+            margin-top: 32px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--cream-dark);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: #444;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #555;
+        }
+
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        li::marker {
+            color: var(--purple-main);
+        }
+
+        strong {
+            color: #333;
+        }
+
+        a {
+            color: var(--purple-main);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: var(--purple-dark);
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid var(--cream-dark);
+            margin: 32px 0;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 24px;
+        }
+
+        .disclaimer {
+            background: var(--cream);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--purple-main);
+            margin-top: 24px;
+        }
+
+        .important-note {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--orange-book);
+            margin: 16px 0;
+        }
+
+        .contact-card {
+            background: var(--cream);
+            padding: 24px;
+            border-radius: 12px;
+            margin: 16px 0;
+        }
+
+        .contact-card p {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--cream);
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        footer p:first-child {
+            margin-bottom: 8px;
+        }
+
+        /* Book stack decoration */
+        .book-stack {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .book {
+            width: 40px;
+            height: 8px;
+            border-radius: 2px;
+        }
+
+        .book-blue { background: var(--blue-book); }
+        .book-green { background: var(--green-book); }
+        .book-orange { background: var(--orange-book); }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 32px 20px 60px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .mascot {
+                width: 120px;
+                height: 120px;
+            }
+
+            .content {
+                padding: 24px;
+            }
+
+            .tab-button {
+                padding: 14px 16px;
+                font-size: 0.9rem;
+            }
+
+            h1.page-title {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="mascot">
+            <img src="lokin-mascot.png" alt="Lokin mascot - a friendly duck on books">
+        </div>
+        <h1>Lokin</h1>
+        <p>Stay focused. Stay productive.</p>
+        <div class="book-stack">
+            <div class="book book-blue"></div>
+            <div class="book book-green"></div>
+            <div class="book book-orange"></div>
+        </div>
+    </header>
+
+    <div class="tab-container">
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'privacy')">Privacy Policy</button>
+            <button class="tab-button" onclick="openTab(event, 'support')">Support</button>
+        </div>
+
+        <div class="content">
+            <!-- Privacy Policy Tab -->
+            <div id="privacy" class="tab-content active">
+                <h1 class="page-title">Privacy Policy</h1>
+                <p class="last-updated"><strong>Last Updated:</strong> 10 January 2026</p>
+
+                <p><strong>Lauckin</strong> ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how our mobile application (the "App") collects, uses, and safeguards your information.</p>
+
+                <p>Please read this Privacy Policy carefully. By accessing or using the App, you agree to be bound by the terms described herein.</p>
+
+                <hr>
+
+                <h2>1. Information We Collect</h2>
+
+                <h3>1.1 Device Activity and App Usage Data</h3>
+
+                <p>Our App utilizes Apple's <strong>Screen Time API</strong> to monitor app usage activity on your device during focus sessions. This technology allows the App to:</p>
+
+                <ul>
+                    <li>Track the duration of active usage within the App.</li>
+                    <li>Detect when the App is moved to the background or when other applications are used ("break events").</li>
+                    <li>Calculate focus scores based on usage patterns.</li>
+                </ul>
+
+                <div class="important-note">
+                    <p><strong>Important:</strong> Screen Time API data is processed entirely on your device using privacy-preserving opaque tokens. We do not have access to specific app names, websites visited, or detailed usage logs. This data is never transmitted to our servers.</p>
+                </div>
+
+                <h3>1.2 Locally Stored Session Data</h3>
+
+                <p>The App stores the following data locally on your device:</p>
+
+                <ul>
+                    <li>Session start and end timestamps.</li>
+                    <li>Duration of focus sessions and break intervals.</li>
+                    <li>Calculated focus scores and performance metrics.</li>
+                    <li>Usage history, streaks, and personal records.</li>
+                </ul>
+
+                <p>This data is stored using secure local storage mechanisms (e.g., CoreData) and is not accessible by us or third parties.</p>
+
+                <hr>
+
+                <h2>2. Use of Information</h2>
+
+                <p>We use the information collected solely for the purpose of providing the App's core functionality:</p>
+
+                <ul>
+                    <li><strong>Session Analysis:</strong> To calculate real-time focus scores and generate session reports.</li>
+                    <li><strong>Performance Tracking:</strong> To display historical data, trends, streaks, and averages within the App.</li>
+                    <li><strong>User Experience:</strong> To provide feedback on focus habits and productivity patterns.</li>
+                </ul>
+
+                <p>All processing of usage data occurs locally on your device. We do not use this information for advertising, marketing, or user profiling.</p>
+
+                <hr>
+
+                <h2>3. Data Storage and Retention</h2>
+
+                <h3>3.1 Local Storage</h3>
+
+                <p>All data generated or processed by the App resides exclusively on your device. We do not operate servers that collect, store, or process your personal data or usage history.</p>
+
+                <h3>3.2 Data Retention</h3>
+
+                <p>Because data is stored locally, it is retained on your device until you manually delete it or uninstall the App. If you delete the App, all associated data will be permanently removed from your device. We do not maintain backups of user data.</p>
+
+                <hr>
+
+                <h2>4. Third-Party Services</h2>
+
+                <p>The App does not utilize third-party analytics, tracking services, advertising networks, or cloud storage providers. No user data is shared with external entities.</p>
+
+                <p>Future versions of the App may include optional social features (e.g., study groups, leaderboards). If introduced, this Privacy Policy will be updated accordingly, and any data collection will require your explicit consent.</p>
+
+                <hr>
+
+                <h2>5. Security</h2>
+
+                <p>We implement appropriate technical and organizational measures to protect your information. All local data is stored within the App's sandbox environment on iOS, utilizing standard encryption provided by the operating system.</p>
+
+                <p>However, please be aware that no method of electronic storage is 100% secure. While we strive to protect your data, we cannot guarantee its absolute security against unauthorized access to your physical device.</p>
+
+                <hr>
+
+                <h2>6. Your Rights and Choices</h2>
+
+                <p>Since the App operates entirely locally:</p>
+
+                <ul>
+                    <li><strong>Access and Correction:</strong> You may view and manage your session history directly within the App.</li>
+                    <li><strong>Deletion:</strong> You can delete all data by uninstalling the App or using in-app data management tools (e.g., "Clear History").</li>
+                    <li><strong>Permissions:</strong> You may revoke the App's access to the Screen Time API at any time via iOS Settings > Screen Time > Family Controls. Revoking this permission will limit the App's functionality.</li>
+                </ul>
+
+                <hr>
+
+                <h2>7. Children's Privacy</h2>
+
+                <p>The App is not directed to individuals under the age of 13. We do not knowingly collect personal information from children under 13. Because the App does not collect data remotely, there is no risk of us transmitting or storing children's personal information.</p>
+
+                <hr>
+
+                <h2>8. Changes to This Policy</h2>
+
+                <p>We reserve the right to modify this Privacy Policy at any time. If we make material changes, we will notify you through the App or by updating the "Last Updated" date at the top of this policy. Your continued use of the App following any changes indicates your acceptance of the new Privacy Policy.</p>
+
+                <hr>
+
+                <h2>9. Contact Us</h2>
+
+                <p>If you have any questions or concerns regarding this Privacy Policy or our data practices, please contact us at:</p>
+
+                <p><strong><a href="mailto:aureolas.info@gmail.com">aureolas.info@gmail.com</a></strong></p>
+
+                <hr>
+
+                <div class="disclaimer">
+                    <p><strong>Legal Disclaimer:</strong> This Privacy Policy is for informational purposes only and does not constitute legal advice. We recommend consulting with legal counsel to ensure compliance with applicable laws in your jurisdiction.</p>
+                </div>
+            </div>
+
+            <!-- Support Tab -->
+            <div id="support" class="tab-content">
+                <h1 class="page-title">Lauckin Support</h1>
+
+                <p class="intro-text">Welcome to Lauckin Support! We're here to help you get the most out of your focus sessions.</p>
+
+                <hr>
+
+                <h2>Contact Us</h2>
+
+                <p>Have questions, feedback, or need assistance? We'd love to hear from you.</p>
+
+                <p><strong>Email:</strong> <a href="mailto:aureolas.info@gmail.com">aureolas.info@gmail.com</a></p>
+
+                <p><strong>Response Time:</strong> We typically respond within 24-48 hours.</p>
+
+                <hr>
+
+                <h2>Frequently Asked Questions</h2>
+
+                <h3>How is my focus score calculated?</h3>
+
+                <p>Your focus score (0-100) is based on how long you stay in the Lauckin app during a session. Your score increases when you remain in the app and decreases when you leave to use other apps. The longer and more consistently you stay focused, the higher your score.</p>
+
+                <h3>Does locking my phone affect my score?</h3>
+
+                <p>No! Locking your phone while Lauckin is active does <strong>NOT</strong> penalize your score. Your session timer continues running and your score keeps increasing. We only track when you leave the app to use other apps while your phone is unlocked.</p>
+
+                <h3>How do I delete my data?</h3>
+
+                <p>All your session data is stored locally on your device. To delete your data:</p>
+
+                <ol>
+                    <li>Go to <strong>Settings</strong> within the app</li>
+                    <li>Tap <strong>"Clear All Data"</strong> or <strong>"Delete History"</strong></li>
+                    <li>Confirm your choice</li>
+                </ol>
+
+                <p>Alternatively, deleting the Lauckin app from your device will permanently remove all associated data.</p>
+
+                <h3>What permissions does Lauckin need?</h3>
+
+                <p>Lauckin requires:</p>
+
+                <ul>
+                    <li><strong>Screen Time API Access:</strong> To monitor when you're using the app vs when you leave it during sessions</li>
+                    <li><strong>Notifications</strong> (optional): To remind you about streaks or session goals</li>
+                </ul>
+
+                <p>We do <strong>NOT</strong> require access to your contacts, camera, location, or any other sensitive data. All tracking happens locally on your device.</p>
+
+                <h3>My session ended unexpectedly. What happened?</h3>
+
+                <p>If your session ended unexpectedly, this could happen if:</p>
+
+                <ul>
+                    <li>iOS closed the app due to low memory</li>
+                    <li>Your device ran out of battery</li>
+                    <li>You force-quit the app</li>
+                </ul>
+
+                <p>When you reopen Lauckin, you'll be asked if you want to resume or discard the interrupted session. If you resume, the time spent away will be counted as a break.</p>
+
+                <h3>Is my data private and secure?</h3>
+
+                <p>Absolutely. All your data is stored locally on your device and is never transmitted to our servers or any third parties. We do not collect, sell, or share your personal information. For full details, please see our Privacy Policy.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Lokin. All rights reserved.</p>
+        <p><a href="#" onclick="openTab(event, 'privacy'); window.scrollTo(0,0); return false;">Privacy Policy</a> | <a href="#" onclick="openTab(event, 'support'); window.scrollTo(0,0); return false;">Support</a></p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+
+            var tabButtons = document.getElementsByClassName("tab-button");
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).classList.add("active");
+
+            if (evt && evt.currentTarget) {
+                evt.currentTarget.classList.add("active");
+            } else {
+                // Handle footer links
+                var buttons = document.getElementsByClassName("tab-button");
+                for (var i = 0; i < buttons.length; i++) {
+                    if ((tabName === 'privacy' && i === 0) || (tabName === 'support' && i === 1)) {
+                        buttons[i].classList.add("active");
+                    }
+                }
+            }
+        }
+
+        // Handle direct URL navigation
+        if (window.location.hash === '#support') {
+            openTab(null, 'support');
+        }
+    </script>
+</body>
+</html>
