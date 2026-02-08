@@ -2,7 +2,7 @@
 
 **Last Updated:** January 10 2026
 
-**Lauckin** ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how our mobile application (the "App") collects, uses, and safeguards your information.
+**Lokin** ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how our mobile application (the "App") collects, uses, and safeguards your information.
 
 Please read this Privacy Policy carefully. By accessing or using the App, you agree to be bound by the terms described herein.
 
