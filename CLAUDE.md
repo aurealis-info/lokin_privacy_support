@@ -9,10 +9,12 @@ This is a static website for Lokin (Lauckin), an iOS focus/productivity app. The
 ## Repository Structure
 
 - **index.html**: Main landing page with tabbed interface for Privacy Policy and Support
+- **privacy/index.html**: Standalone privacy policy page
+- **support/index.html**: Standalone support/FAQ page
+- **terms/index.html**: Standalone terms & conditions page
 - **Data_policy_text.md**: Source markdown for privacy policy (verbatim legal text)
-- **lokin_support_text**: Source markdown for support/FAQ content (verbatim text)
+- **lokin_support_text.md**: Source markdown for support/FAQ content (verbatim text)
 - **CNAME**: Custom domain configuration for GitHub Pages (lokin.live)
-- **Legacy HTML files**: Old Notion exports (can be removed)
 
 ## Deployment
 
