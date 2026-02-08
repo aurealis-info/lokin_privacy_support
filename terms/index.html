@@ -1,183 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lokin - Terms & Conditions</title>
+    <title>Lokin - Terms of Use</title>
     <style>
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      :root {
-        --purple-main: #8B5CF6;
-        --purple-dark: #7C3AED;
-        --purple-light: #A78BFA;
-        --blue-book: #7DD3FC;
-        --green-book: #4ADE80;
-        --orange-book: #FB923C;
-        --coral-red: #F87171;
-        --cream: #FEF3E2;
-        --cream-dark: #F5E6D3;
-      }
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background-color: var(--cream);
-        min-height: 100vh;
-      }
-      header {
-        background: var(--purple-main);
-        color: white;
-        padding: 48px 20px;
-        text-align: center;
-      }
-      .mascot {
-        width: 100px;
-        height: 100px;
-        margin: 0 auto 16px;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-      }
-      .mascot img { width: 100%; height: 100%; object-fit: cover; }
-      header h1 {
-        font-size: 2.2rem;
-        font-weight: 800;
-        margin-bottom: 4px;
-      }
-      header p {
-        font-size: 1.1rem;
-        opacity: 0.9;
-      }
-      .book-stack {
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-        margin-top: 12px;
-      }
-      .book { width: 40px; height: 8px; border-radius: 2px; }
-      .book-blue { background: var(--blue-book); }
-      .book-green { background: var(--green-book); }
-      .book-orange { background: var(--orange-book); }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-      nav {
-        background: white;
-        padding: 16px 20px;
-        text-align: center;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      }
-      nav a {
-        color: var(--purple-main);
-        text-decoration: none;
-        font-weight: 600;
-        margin: 0 16px;
-        font-size: 0.95rem;
-        padding: 8px 0;
-        border-bottom: 2px solid transparent;
-        transition: all 0.2s;
-      }
-      nav a:hover { color: var(--purple-dark); border-bottom-color: var(--purple-dark); }
-      nav a.active { border-bottom-color: var(--purple-main); }
+        :root {
+            --purple-main: #8B5CF6;
+            --purple-dark: #7C3AED;
+            --cream: #FEF3E2;
+            --cream-dark: #F5E6D3;
+        }
 
-      .container {
-        max-width: 800px;
-        margin: 32px auto;
-        padding: 0 20px 40px;
-      }
-      .card {
-        background: white;
-        border-radius: 16px;
-        padding: 40px;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-        margin-bottom: 24px;
-      }
-      h1.page-title {
-        font-size: 2rem;
-        color: var(--purple-dark);
-        margin-bottom: 8px;
-      }
-      .last-updated {
-        color: #666;
-        margin-bottom: 24px;
-      }
-      h2 {
-        font-size: 1.5rem;
-        color: var(--purple-dark);
-        margin-top: 32px;
-        margin-bottom: 16px;
-        padding-bottom: 8px;
-        border-bottom: 2px solid var(--cream-dark);
-      }
-      h3 {
-        font-size: 1.25rem;
-        color: #444;
-        margin-top: 24px;
-        margin-bottom: 12px;
-      }
-      p { margin-bottom: 16px; color: #555; }
-      ul, ol { margin-bottom: 16px; padding-left: 24px; }
-      li { margin-bottom: 8px; color: #555; }
-      li::marker { color: var(--purple-main); }
-      strong { color: #333; }
-      a { color: var(--purple-main); text-decoration: none; font-weight: 500; }
-      a:hover { color: var(--purple-dark); text-decoration: underline; }
-      hr { border: none; border-top: 2px solid var(--cream-dark); margin: 32px 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            min-height: 100vh;
+        }
 
-      .disclaimer {
-        background: var(--cream);
-        padding: 16px 20px;
-        border-radius: 12px;
-        border-left: 4px solid var(--purple-main);
-        margin-top: 24px;
-      }
+        .hero {
+            text-align: center;
+            padding: 64px 20px 32px;
+        }
 
-      footer {
-        text-align: center;
-        padding: 32px 24px;
-        color: #888;
-        font-size: 0.85rem;
-      }
-      footer a { color: var(--purple-main); }
-      footer a:hover { color: var(--purple-dark); }
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 12px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
 
-      @media (max-width: 600px) {
-        header { padding: 32px 20px; }
-        header h1 { font-size: 1.8rem; }
-        .mascot { width: 80px; height: 80px; }
-        .card { padding: 24px; }
-        h1.page-title { font-size: 1.5rem; }
-        h2 { font-size: 1.25rem; }
-      }
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #1a1a1a;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        h1.page-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .last-updated {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        ul, ol {
+            margin-bottom: 12px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 4px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        strong {
+            color: #333;
+        }
+
+        a {
+            color: var(--purple-main);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: var(--purple-dark);
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 28px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 20px;
+            border-top: 1px solid #eee;
+        }
+
+        footer .links {
+            margin-bottom: 12px;
+        }
+
+        footer .links a {
+            color: #555;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin: 0 12px;
+        }
+
+        footer .links a:hover {
+            color: var(--purple-main);
+        }
+
+        footer .copyright {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 48px 20px 24px;
+            }
+
+            .app-icon {
+                width: 64px;
+                height: 64px;
+            }
+
+            .container {
+                padding: 0 16px 40px;
+            }
+
+            h1.page-title {
+                font-size: 1.4rem;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <header>
-      <a href="/" style="text-decoration:none; color:white;">
-        <div class="mascot">
-          <img src="../lokin-mascot.png" alt="Lokin mascot - a friendly duck on books">
-        </div>
-        <h1>Lokin</h1>
-      </a>
-      <p>Stay focused. Stay productive.</p>
-      <div class="book-stack">
-        <div class="book book-blue"></div>
-        <div class="book book-green"></div>
-        <div class="book book-orange"></div>
-      </div>
-    </header>
-
-    <nav>
-      <a href="/">Home</a>
-      <a href="/privacy">Privacy</a>
-      <a href="/support">Support</a>
-      <a href="/terms" class="active">Terms</a>
-    </nav>
+</head>
+<body>
+    <div class="hero">
+        <a href="/" style="text-decoration:none; color:inherit;">
+            <div class="app-icon">
+                <img src="../lokin-mascot.png" alt="Lokin">
+            </div>
+            <h1>Lokin</h1>
+        </a>
+    </div>
 
     <div class="container">
-      <div class="card">
-        <h1 class="page-title">Terms & Conditions</h1>
+        <h1 class="page-title">Terms of Use</h1>
         <p class="last-updated"><strong>Last Updated:</strong> 10 January 2026</p>
 
-        <p>Welcome to <strong>Lokin</strong> ("we," "our," or "us"). These Terms and Conditions ("Terms") govern your access to and use of our mobile application (the "App"). By downloading, installing, or using the App, you agree to be bound by these Terms.</p>
+        <p>Welcome to <strong>Lokin</strong> ("we," "our," or "us"). These Terms of Use ("Terms") govern your access to and use of our mobile application (the "App"). By downloading, installing, or using the App, you agree to be bound by these Terms.</p>
 
         <p>If you do not agree to these Terms, please do not use the App.</p>
 
@@ -202,12 +202,12 @@
         <h2>4. Acceptable Use</h2>
         <p>You agree to use Lokin only for lawful purposes and in accordance with these Terms. You agree not to:</p>
         <ul>
-          <li>Reverse engineer, decompile, or disassemble the App or any part thereof.</li>
-          <li>Attempt to gain unauthorized access to the App's source code or underlying systems.</li>
-          <li>Use the App to develop competing products or services.</li>
-          <li>Distribute, sublicense, or transfer the App to any third party without our consent.</li>
-          <li>Remove, alter, or obscure any proprietary notices or labels on the App.</li>
-          <li>Use the App in any way that could damage, disable, or impair its functionality.</li>
+            <li>Reverse engineer, decompile, or disassemble the App or any part thereof.</li>
+            <li>Attempt to gain unauthorized access to the App's source code or underlying systems.</li>
+            <li>Use the App to develop competing products or services.</li>
+            <li>Distribute, sublicense, or transfer the App to any third party without our consent.</li>
+            <li>Remove, alter, or obscure any proprietary notices or labels on the App.</li>
+            <li>Use the App in any way that could damage, disable, or impair its functionality.</li>
         </ul>
 
         <hr>
@@ -253,19 +253,15 @@
 
         <h2>12. Contact Us</h2>
         <p>If you have any questions about these Terms, please contact us at:</p>
-        <p><strong><a href="mailto:aureolas.info@gmail.com">aureolas.info@gmail.com</a></strong></p>
-
-        <hr>
-
-        <div class="disclaimer">
-          <p><strong>Legal Disclaimer:</strong> These Terms and Conditions are for informational purposes only and do not constitute legal advice. We recommend consulting with legal counsel to ensure compliance with applicable laws in your jurisdiction.</p>
-        </div>
-      </div>
+        <p><strong><a href="mailto:aurealis.info@gmail.com">aurealis.info@gmail.com</a></strong></p>
     </div>
 
     <footer>
-      <p>&copy; 2025 Lokin. All rights reserved.</p>
-      <p><a href="/privacy">Privacy Policy</a> &middot; <a href="/support">Support</a> &middot; <a href="/terms">Terms &amp; Conditions</a></p>
+        <div class="links">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+        </div>
+        <p class="copyright">&copy; 2026 Lokin. All rights reserved.</p>
     </footer>
-  </body>
+</body>
 </html>

@@ -4,14 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a static website for Lokin (Lauckin), an iOS focus/productivity app. The site hosts privacy policy and support documentation pages, deployed via GitHub Pages at lokin.live.
+This is a static website for Lokin, an iOS focus/productivity app. The site hosts support, privacy policy, and terms of use pages, deployed via GitHub Pages at lokin.live.
 
 ## Repository Structure
 
-- **index.html**: Main landing page with tabbed interface for Privacy Policy and Support
-- **privacy/index.html**: Standalone privacy policy page
-- **support/index.html**: Standalone support/FAQ page
-- **terms/index.html**: Standalone terms & conditions page
+- **index.html**: Main landing page (support/FAQ + contact)
+- **privacy/index.html**: Privacy policy page
+- **terms/index.html**: Terms of use page
 - **Data_policy_text.md**: Source markdown for privacy policy (verbatim legal text)
 - **lokin_support_text.md**: Source markdown for support/FAQ content (verbatim text)
 - **CNAME**: Custom domain configuration for GitHub Pages (lokin.live)
@@ -22,8 +21,8 @@ The site is hosted on GitHub Pages. Simply push changes to the main branch to de
 
 ## Content Updates
 
-**Important**: The text in index.html must remain verbatim from the source markdown files for legal purposes.
+**Important**: The text in the HTML pages must remain verbatim from the source markdown files for legal purposes.
 
 To update content:
 1. Update the source markdown files first
-2. Copy the exact text into index.html, preserving all wording
+2. Copy the exact text into the corresponding HTML page, preserving all wording
