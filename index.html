@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lokin - Support</title>
+    <title>Lokin - Stay Focused</title>
+    <meta name="description" content="Lokin helps you stay focused and build better study habits. Track your focus sessions, manage tasks, and build daily streaks.">
     <style>
         * {
             box-sizing: border-box;
@@ -12,275 +13,425 @@
         }
 
         :root {
-            --purple-main: #8B5CF6;
-            --purple-dark: #7C3AED;
-            --purple-light: #A78BFA;
-            --cream: #FEF3E2;
-            --cream-dark: #F5E6D3;
+            --purple: #833afd;
+            --purple-dark: #6b2fd4;
+            --purple-light: #a968ff;
+            --bg: #F9F7FF;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --text-light: #999;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #fff;
+            color: var(--text-primary);
+            background-color: var(--bg);
             min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
+
+        /* ========================================
+           HERO SECTION
+           ======================================== */
 
         .hero {
-            text-align: center;
-            padding: 64px 20px 48px;
+            padding: 60px 40px 80px;
+            max-width: 1120px;
+            margin: 0 auto;
         }
 
-        .app-icon {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 16px;
-            border-radius: 22px;
-            overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 48px;
         }
 
-        .app-icon img {
-            width: 100%;
-            height: 100%;
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
             object-fit: cover;
         }
 
-        .hero h1 {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #1a1a1a;
-            margin-bottom: 8px;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .container {
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 0 20px 60px;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section h2 {
-            font-size: 1.3rem;
+        .logo-text {
+            font-size: 1.15rem;
             font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 16px;
+            color: var(--text-primary);
         }
 
-        .contact-box {
-            background: var(--cream);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 8px;
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
         }
 
-        .contact-box p {
-            margin-bottom: 8px;
-            color: #555;
-            font-size: 0.95rem;
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.08;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
         }
 
-        .contact-box p:last-child {
-            margin-bottom: 0;
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 36px;
+            max-width: 380px;
         }
 
-        .contact-box a {
-            color: var(--purple-main);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-box a:hover {
-            color: var(--purple-dark);
-            text-decoration: underline;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid #eee;
-            padding: 20px 0;
-        }
-
-        .faq-item:first-of-type {
-            border-top: 1px solid #eee;
-        }
-
-        .faq-item h3 {
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--purple);
+            color: #fff;
+            padding: 15px 32px;
+            border-radius: 50px;
             font-size: 1.05rem;
             font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 8px;
-        }
-
-        .faq-item p {
-            color: #555;
-            font-size: 0.95rem;
-            margin-bottom: 8px;
-        }
-
-        .faq-item p:last-child {
-            margin-bottom: 0;
-        }
-
-        .faq-item ol, .faq-item ul {
-            padding-left: 20px;
-            margin-bottom: 8px;
-        }
-
-        .faq-item li {
-            color: #555;
-            font-size: 0.95rem;
-            margin-bottom: 4px;
-        }
-
-        strong {
-            color: #333;
-        }
-
-        a {
-            color: var(--purple-main);
             text-decoration: none;
-            font-weight: 500;
+            transition: background 0.2s ease, transform 0.2s ease;
         }
 
-        a:hover {
-            color: var(--purple-dark);
-            text-decoration: underline;
+        .cta-button:hover {
+            background: var(--purple-dark);
+            transform: translateY(-1px);
+            text-decoration: none;
         }
 
-        footer {
-            text-align: center;
-            padding: 32px 20px;
-            border-top: 1px solid #eee;
+        .cta-button svg {
+            flex-shrink: 0;
         }
 
-        footer .links {
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .phone-mockup {
+            max-height: 520px;
+            width: auto;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.12));
+        }
+
+        /* ========================================
+           FEATURES SECTION
+           ======================================== */
+
+        .features {
+            padding: 80px 40px 100px;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
             margin-bottom: 12px;
         }
 
-        footer .links a {
-            color: #555;
-            font-size: 0.9rem;
+        .features-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 56px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+        }
+
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: rgba(131, 58, 253, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--purple);
+        }
+
+        .feature h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+
+        footer {
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 32px 40px;
+        }
+
+        .footer-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-brand-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .footer-brand-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .footer-brand-dot {
+            color: var(--text-light);
+            margin: 0 2px;
+        }
+
+        .footer-brand-tagline {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        .footer-nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .footer-nav a {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
             font-weight: 500;
-            margin: 0 12px;
+            text-decoration: none;
+            transition: color 0.15s ease;
         }
 
-        footer .links a:hover {
-            color: var(--purple-main);
+        .footer-nav a:hover {
+            color: var(--text-primary);
         }
 
-        footer .copyright {
+        .footer-bottom {
+            text-align: center;
+        }
+
+        .copyright {
             font-size: 0.8rem;
-            color: #999;
+            color: var(--text-light);
+        }
+
+        /* ========================================
+           RESPONSIVE
+           ======================================== */
+
+        @media (max-width: 900px) {
+            .hero {
+                padding: 40px 24px 60px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-subtitle {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .logo {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            .phone-mockup {
+                max-height: 440px;
+            }
+
+            .features {
+                padding: 60px 24px 80px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+                max-width: 400px;
+            }
+
+            footer {
+                padding: 32px 24px;
+            }
+
+            .footer-top {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .footer-nav {
+                gap: 24px;
+            }
         }
 
         @media (max-width: 600px) {
             .hero {
-                padding: 48px 20px 32px;
+                padding: 32px 20px 48px;
             }
 
-            .hero h1 {
-                font-size: 1.6rem;
+            .logo {
+                margin-bottom: 32px;
             }
 
-            .app-icon {
-                width: 80px;
-                height: 80px;
+            .hero-content h1 {
+                font-size: 2.2rem;
             }
 
-            .container {
-                padding: 0 16px 40px;
+            .hero-subtitle {
+                font-size: 1.05rem;
+            }
+
+            .phone-mockup {
+                max-height: 360px;
+            }
+
+            .features {
+                padding: 48px 20px 64px;
+            }
+
+            .features h2 {
+                font-size: 1.8rem;
+            }
+
+            .features-grid {
+                gap: 32px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <div class="app-icon">
-            <img src="lokin-mascot.png" alt="Lokin">
-        </div>
-        <h1>Lokin</h1>
-        <p>Stay focused. Stay productive.</p>
-    </div>
 
-    <div class="container">
-        <div class="section">
-            <h2>Contact Us</h2>
-            <div class="contact-box">
-                <p>Have questions, feedback, or need assistance?</p>
-                <p><strong>Email:</strong> <a href="mailto:aurealis.info@gmail.com">aurealis.info@gmail.com</a></p>
-                <p><strong>Response Time:</strong> We typically respond within 24-48 hours.</p>
-            </div>
+    <section class="hero">
+        <div class="logo">
+            <img src="lokin-mascot.png" alt="Lokin" class="logo-icon">
+            <span class="logo-text">Lokin</span>
         </div>
 
-        <div class="section">
-            <h2>Frequently Asked Questions</h2>
-
-            <div class="faq-item">
-                <h3>How is my focus score calculated?</h3>
-                <p>Your focus score (0-100) is based on how long you stay in the Lokin app during a session. Your score increases when you remain in the app and decreases when you leave to use other apps. The longer and more consistently you stay focused, the higher your score.</p>
+        <div class="hero-grid">
+            <div class="hero-content">
+                <h1>Meet Lokin,<br>your focus<br>companion</h1>
+                <p class="hero-subtitle">Stay focused, build habits, and level up — one session at a time.</p>
+                <a href="#" class="cta-button">
+                    <svg width="18" height="22" viewBox="0 0 384 512" fill="currentColor">
+                        <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+                    </svg>
+                    Download on iOS
+                </a>
             </div>
 
-            <div class="faq-item">
-                <h3>Does locking my phone affect my score?</h3>
-                <p>No! Locking your phone while Lokin is active does <strong>NOT</strong> penalize your score. Your session timer continues running and your score keeps increasing. We only track when you leave the app to use other apps while your phone is unlocked.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>How do I delete my data?</h3>
-                <p>All your session data is stored locally on your device. To delete your data:</p>
-                <ol>
-                    <li>Go to <strong>Settings</strong> within the app</li>
-                    <li>Tap <strong>"Clear All Data"</strong> or <strong>"Delete History"</strong></li>
-                    <li>Confirm your choice</li>
-                </ol>
-                <p>Alternatively, deleting the Lokin app from your device will permanently remove all associated data.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>What permissions does Lokin need?</h3>
-                <p>Lokin requires:</p>
-                <ul>
-                    <li><strong>Screen Time API Access:</strong> To monitor when you're using the app vs when you leave it during sessions</li>
-                    <li><strong>Notifications</strong> (optional): To remind you about streaks or session goals</li>
-                </ul>
-                <p>We do <strong>NOT</strong> require access to your contacts, camera, location, or any other sensitive data. All tracking happens locally on your device.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>My session ended unexpectedly. What happened?</h3>
-                <p>If your session ended unexpectedly, this could happen if:</p>
-                <ul>
-                    <li>iOS closed the app due to low memory</li>
-                    <li>Your device ran out of battery</li>
-                    <li>You force-quit the app</li>
-                </ul>
-                <p>When you reopen Lokin, you'll be asked if you want to resume or discard the interrupted session. If you resume, the time spent away will be counted as a break.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>Is my data private and secure?</h3>
-                <p>Absolutely. All your data is stored locally on your device and is never transmitted to our servers or any third parties. We do not collect, sell, or share your personal information. For full details, please see our <a href="/privacy">Privacy Policy</a>.</p>
+            <div class="hero-visual">
+                <img src="app-screenshot.png" alt="Lokin app — focus session with duck mascot" class="phone-mockup">
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="features">
+        <h2>Built for focus</h2>
+        <p class="features-subtitle">Simple features designed to keep you on track</p>
+
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                </div>
+                <h3>Focus Sessions</h3>
+                <p>Lock in and stay focused with timed sessions. Your focus score tracks how present you stayed.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 11l3 3L22 4"/>
+                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                    </svg>
+                </div>
+                <h3>Smart Tasks</h3>
+                <p>Break your work into actionable tasks. Stay organized and check off goals as you go.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20V10"/>
+                        <path d="M18 20V4"/>
+                        <path d="M6 20v-4"/>
+                    </svg>
+                </div>
+                <h3>Streaks & Stats</h3>
+                <p>Build daily streaks and track your progress over time. Every session counts toward better habits.</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <div class="links">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms of Use</a>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="lokin-mascot.png" alt="Lokin" class="footer-brand-icon">
+                <span class="footer-brand-name">Lokin</span>
+                <span class="footer-brand-dot">&middot;</span>
+                <span class="footer-brand-tagline">Stay focused</span>
+            </div>
+            <nav class="footer-nav">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Use</a>
+            </nav>
         </div>
-        <p class="copyright">&copy; 2026 Lokin. All rights reserved.</p>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 Lokin. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>

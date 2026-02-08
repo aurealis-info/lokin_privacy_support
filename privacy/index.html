@@ -12,188 +12,203 @@
         }
 
         :root {
-            --purple-main: #8B5CF6;
-            --purple-dark: #7C3AED;
-            --cream: #FEF3E2;
-            --cream-dark: #F5E6D3;
+            --purple: #833afd;
+            --purple-dark: #6b2fd4;
+            --bg: #F9F7FF;
+            --text-primary: #1a1a1a;
+            --text-secondary: #555;
+            --text-light: #999;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
+            line-height: 1.78;
+            color: var(--text-secondary);
+            background-color: var(--bg);
             min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        .hero {
-            text-align: center;
-            padding: 64px 20px 32px;
+        /* ========================================
+           MASCOT HEADER
+           ======================================== */
+
+        .page-header {
+            display: flex;
+            justify-content: center;
+            padding: 48px 24px 0;
         }
 
-        .app-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 12px;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        .mascot-link {
+            display: block;
+            width: 128px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            text-decoration: none;
         }
 
-        .app-icon img {
+        .mascot-link:hover {
+            transform: scale(1.05);
+        }
+
+        .mascot-link img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            border-radius: 28px;
         }
 
-        .hero h1 {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: #1a1a1a;
-        }
+        /* ========================================
+           CONTENT
+           ======================================== */
 
-        .container {
-            max-width: 640px;
+        article {
+            max-width: 768px;
             margin: 0 auto;
-            padding: 0 20px 60px;
+            padding: 48px 24px 80px;
         }
 
-        h1.page-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #1a1a1a;
+        /* Prose typography — replicating Tailwind prose-lg */
+
+        article h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            line-height: 1.2;
             margin-bottom: 4px;
         }
 
         .last-updated {
-            color: #888;
             font-size: 0.9rem;
-            margin-bottom: 32px;
+            color: var(--text-light);
+            margin-bottom: 40px;
         }
 
-        h2 {
-            font-size: 1.2rem;
+        article h2 {
+            font-size: 1.25rem;
             font-weight: 700;
-            color: #1a1a1a;
-            margin-top: 32px;
+            color: var(--text-primary);
+            line-height: 1.3;
+            margin-top: 48px;
+            margin-bottom: 16px;
+        }
+
+        article h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.4;
+            margin-top: 28px;
             margin-bottom: 12px;
         }
 
-        h3 {
+        article p {
             font-size: 1.05rem;
-            font-weight: 600;
-            color: #333;
-            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        article ul, article ol {
+            margin-bottom: 20px;
+            padding-left: 24px;
+        }
+
+        article li {
+            font-size: 1.05rem;
             margin-bottom: 8px;
         }
 
-        p {
-            margin-bottom: 12px;
-            color: #555;
-            font-size: 0.95rem;
+        article strong {
+            color: var(--text-primary);
+            font-weight: 600;
         }
 
-        ul, ol {
-            margin-bottom: 12px;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 4px;
-            color: #555;
-            font-size: 0.95rem;
-        }
-
-        strong {
-            color: #333;
-        }
-
-        a {
-            color: var(--purple-main);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        a:hover {
-            color: var(--purple-dark);
+        article a {
+            color: var(--purple);
             text-decoration: underline;
+            text-decoration-color: rgba(131, 58, 253, 0.3);
+            text-underline-offset: 2px;
+            font-weight: 500;
+            transition: text-decoration-color 0.15s ease;
         }
 
-        hr {
+        article a:hover {
+            text-decoration-color: var(--purple);
+        }
+
+        article hr {
             border: none;
-            border-top: 1px solid #eee;
-            margin: 28px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            margin: 40px 0;
         }
 
         .important-note {
-            background: var(--cream);
+            background: rgba(131, 58, 253, 0.05);
+            border-left: 3px solid var(--purple);
             padding: 16px 20px;
-            border-radius: 12px;
-            margin: 12px 0;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
         }
 
         .important-note p {
             margin-bottom: 0;
         }
 
+        /* ========================================
+           FOOTER
+           ======================================== */
+
         footer {
             text-align: center;
-            padding: 32px 20px;
-            border-top: 1px solid #eee;
+            padding: 24px 24px 32px;
         }
 
-        footer .links {
-            margin-bottom: 12px;
-        }
-
-        footer .links a {
-            color: #555;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin: 0 12px;
-        }
-
-        footer .links a:hover {
-            color: var(--purple-main);
-        }
-
-        footer .copyright {
+        .copyright {
             font-size: 0.8rem;
-            color: #999;
+            color: var(--text-light);
         }
+
+        /* ========================================
+           RESPONSIVE
+           ======================================== */
 
         @media (max-width: 600px) {
-            .hero {
-                padding: 48px 20px 24px;
+            .page-header {
+                padding: 32px 20px 0;
             }
 
-            .app-icon {
-                width: 64px;
-                height: 64px;
+            .mascot-link {
+                width: 96px;
             }
 
-            .container {
-                padding: 0 16px 40px;
+            article {
+                padding: 32px 20px 60px;
             }
 
-            h1.page-title {
-                font-size: 1.4rem;
+            article h1 {
+                font-size: 1.6rem;
+            }
+
+            article h2 {
+                font-size: 1.15rem;
+                margin-top: 36px;
+            }
+
+            article p, article li {
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <a href="/" style="text-decoration:none; color:inherit;">
-            <div class="app-icon">
-                <img src="../lokin-mascot.png" alt="Lokin">
-            </div>
-            <h1>Lokin</h1>
+
+    <div class="page-header">
+        <a href="/" class="mascot-link">
+            <img src="/lokin-mascot.png" alt="Lokin — Return Home">
         </a>
     </div>
 
-    <div class="container">
-        <h1 class="page-title">Privacy Policy</h1>
+    <article>
+        <h1>Privacy Policy</h1>
         <p class="last-updated"><strong>Last Updated:</strong> 10 January 2026</p>
 
         <p><strong>Lauckin</strong> ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how our mobile application (the "App") collects, uses, and safeguards your information.</p>
@@ -304,14 +319,11 @@
         <p>If you have any questions or concerns regarding this Privacy Policy, please contact us at:</p>
 
         <p><strong><a href="mailto:aurealis.info@gmail.com">aurealis.info@gmail.com</a></strong></p>
-    </div>
+    </article>
 
     <footer>
-        <div class="links">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms of Use</a>
-        </div>
         <p class="copyright">&copy; 2026 Lokin. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
